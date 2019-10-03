@@ -15,5 +15,7 @@ jobs:
         unzip packer_1.4.4_linux_amd64.zip
         mv packer_1.4.4_linux_amd64 /usr/local/bin
         chmod 755 /usr/local/bin/packer
+    - name: Add user variables
+      run: echo ${{ secrets.USER_JSON }} > user.json
     - name: Build
-      run: packer build openvidu.yml
+      run: packer build -var-file user.json openvidu.json
