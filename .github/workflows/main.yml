@@ -13,7 +13,7 @@ jobs:
       run: |
         wget https://releases.hashicorp.com/packer/1.4.4/packer_1.4.4_linux_amd64.zip
         unzip packer_1.4.4_linux_amd64.zip
-        mv packer_1.4.4_linux_amd64 /usr/local/bin
+        mv packer /usr/local/bin
         chmod 755 /usr/local/bin/packer
     - name: Add user variables
       run: echo ${{ secrets.USER_JSON }} > user.json
