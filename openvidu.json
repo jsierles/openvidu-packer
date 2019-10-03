@@ -29,21 +29,6 @@
 
     },
     {
-      "type": "file",
-      "source": "WebRtcEndpoint.conf.ini",
-      "destination": "/etc/kurento/modules/kurento/WebRtcEndpoint.conf.ini"
-    },
-    {
-      "type": "file",
-      "source": "turnserver.conf",
-      "destination": "/etc/turnserver.conf"
-    },
-    {
-      "type": "file",
-      "source": "default-coturn",
-      "destination": "/etc/default/coturn"
-    },
-    {
       "type": "shell",
       "scripts": ["init-services.sh"]
 
